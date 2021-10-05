@@ -7,7 +7,7 @@
     <br />
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Tutorial</a>
+    <a href="https://www.youtube.com/watch?v=KGWZ_CxJ43g">View Tutorial</a>
   </p>
 </p>
 
