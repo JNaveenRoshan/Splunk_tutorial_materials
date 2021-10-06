@@ -59,9 +59,9 @@ To configure UDP data input in Splunk follow these simple steps.
    
 3. Type port number 514 and Click next 
 
-**Note:**
+  **Note:**
 
-If the port is occupied by TCP data input please do disable that or use another port number
+  If the port is occupied by TCP data input please do disable that or use another port number
   
   
 4. Choose Searching and Reporting App  
