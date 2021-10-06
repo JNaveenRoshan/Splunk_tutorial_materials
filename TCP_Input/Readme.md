@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <h3 align="center">Installation of Splunk</h3>
+  <h3 align="center">How to send data to Splunk via TCP</h3>
 
   <p align="center">
     <br />
@@ -21,7 +21,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Setting up Data Input</a></li>
       </ul>
     </li>
     <li><a href="#More Details">More Details</a></li>
@@ -31,7 +31,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## User Guide on Installing Splunk in Linux on Cloud
+## User Guide on Setting up TCP Data Input to receive data 
 
 
 
@@ -40,46 +40,49 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get Splunk up and running follow these simple steps.
+To configure TCP data input in Splunk follow these simple steps.
 
 ### Prerequisites
 
- We need a package called **wget** to get splunk software from the splunk web server into our machine.If you already have this package please do ignore the below step
-* npm
+ netcat is the package we need to send data from one instance to another.Execute the below code in the non splunk instance
   ```sh
-  sudo apt install wget
+  sudo apt install netcat
   ```
 
-### Installation
+### Setting up 
 
-1. We need to get the Splunk software into our machine 
-   ```sh
-   sudo wget -O splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz 'https://d7wz6hmoaavd0.cloudfront.net/products/splunk/releases/8.2.2.1/linux/splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz'
-   ```
-2. We want to extract the Splunk under the opt directory
-   ```sh
-   tar xzvf splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz -C /opt
-   ```
-3. There is splunk startup file under the directory /opt/splunk/bin 
-   ```sh
-   cd /opt/splunk/bin
-   ```
-4. Start the Splunk 
-   ```sh
-   sudo ./splunk start
-   ```
-5. However you will be asked to create a user name and password which you will use to access the Splunk GUI
+1. Open Splunk and Go to Settings-->Data Inputs
+  
+  
+2. Click TCP input and Click Create new
+   
+   
+3. Type port number 514 and Click next 
+  
+  
+4. Choose Searching and Reporting App  
+   
+   
+5. Creating a new index,sourcetype are optional
 
-6. Once everything is done you need to open a browser and type the below code to access the Splunk (However the **localhost** in the below code must be changed to the respective IP when using VMs) 
+
+6. Review and Click Sumbit
+
+
+7.**Note** - Always remember to create the firewall rule to access the port
+
+
+8. In the 
    ```sh
-   localhost:8000
+   cat <location of file> | nc <IP address> <Port number>
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## More Details
 
 Use the below link for the official documentation of Splunk
 
- please refer to the [Documentation](https://docs.splunk.com/Documentation/Splunk/8.2.2/Installation/Chooseyourplatform)
+ please refer to the [Documentation](https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/Monitornetworkports)
 
 
 
