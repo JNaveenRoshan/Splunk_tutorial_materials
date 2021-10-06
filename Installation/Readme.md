@@ -45,7 +45,6 @@ To get Splunk up and running follow these simple steps.
 ### Prerequisites
 
  We need a package called **wget** to get splunk software from the splunk web server into our machine.If you already have this package please do ignore the below step
-* npm
   ```sh
   sudo apt install wget
   ```
