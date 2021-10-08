@@ -69,15 +69,15 @@ To configure HEC data input in Splunk follow these simple steps.
 6. Review and Click Sumbit
 
 
-7.**Note** - A token will be generated.Save the token somewhere safe.
+**Note** - A token will be generated.Save the token somewhere safe.
 
 
-8. In the non splunk instance execute the following command to send the events
+7. In the non splunk instance execute the following command to send the events
    ```sh
    curl -k "https://localhost:8088/services/collector" \ -H "Authorization: Splunk <HEC Token> \-d '{"event": "Pony 1 has left the barn"}{"event": "Pony 2 has left the barn"        {"event": "Pony 3 has left the barn", "nested": {"key1": "value1"}}'
    ```
 
-9.Replace <HEC Token> with the token you saved earlier and replace localhost with the external IP in case of VM instance
+ 8.Replace <HEC Token> with the token you saved earlier and replace localhost with the external IP in case of VM instance
 
 
 <!-- USAGE EXAMPLES -->
