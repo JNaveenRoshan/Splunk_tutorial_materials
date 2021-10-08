@@ -57,7 +57,7 @@ To configure HEC data input in Splunk follow these simple steps.
 2. Click HTTP Event Collector input and Click Create new
    
    
-3. Type the name of the data input whilst type the port 8088 and Click next 
+3. Type the name of the data input whilst type the port number as 8088 and Click next 
 
   
 4. Choose Searching and Reporting App  
