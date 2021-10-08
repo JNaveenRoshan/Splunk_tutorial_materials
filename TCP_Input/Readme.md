@@ -72,7 +72,7 @@ To configure TCP data input in Splunk follow these simple steps.
   **Note** - Always remember to create the firewall rule to access the port
 
 
-7. In the non splunk instance execute the following command to send data to the splunk
+7. In the non splunk instance execute the following command to send the data to splunk
    ```sh
    cat <location of file> | nc <IP address> <Port number>
    ```
