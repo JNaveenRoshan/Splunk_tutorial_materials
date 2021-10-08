@@ -69,10 +69,10 @@ To configure TCP data input in Splunk follow these simple steps.
 6. Review and Click Sumbit
 
 
-7.**Note** - Always remember to create the firewall rule to access the port
+**Note** - Always remember to create the firewall rule to access the port
 
 
-8. In the 
+7. In the non splunk instance execute the following command to send data to the splunk
    ```sh
    cat <location of file> | nc <IP address> <Port number>
    ```
