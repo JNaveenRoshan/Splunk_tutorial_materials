@@ -22,7 +22,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Masking</a></li>
+        <li><a href="#Masking">Masking</a></li>
       </ul>
     </li>
     <li><a href="#More Details">More Details</a></li>
@@ -49,8 +49,16 @@ To Mask the data in the backend of the Splunk follow these simple steps.
   ```sh
   nano accounts.log
   ```
+  
+  Copy and paste the below contents in the file
+   ```sh
+  ss=123456789, cc=1234-5678-9012-3456
+  ss=123456790, cc=2234-5678-9012-3457
+  ss=123456791, cc=3234-5678-9012-3458
+  ss=123456792, cc=4234-5678-9012-3459
+  ```
 
-### Installation
+### Masking
 
 1. We need to get the Splunk software into our machine 
    ```sh
