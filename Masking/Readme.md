@@ -81,10 +81,11 @@ To Mask the data in the backend of the Splunk follow these simple steps.
    ```sh
    nano props.conf
    ```
-   
-8.Copy and Paste the below contents inside the props.conf file
+
+8. Copy and Paste the below contents inside the props.conf file
    ```sh
-   nano props.conf
+   [SSN-CC]
+   SEDCMD-Anon = s/ss=\d{5}(\d{4})/ss=xxxxx\1/g s/cc=(\d{4}-){3}(\d{4})/cc=xxxx-xxxx-xxxx-\2/g
    ```
 
 <!-- USAGE EXAMPLES -->
