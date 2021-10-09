@@ -92,11 +92,30 @@ To Mask the data in the backend of the Splunk follow these simple steps.
    ```sh
    sudo ./splunk restart
    ```
-8. Now go to /var/log/ and create a new file named acc2.log and copy the below contents into the file(However this file is available above) 
+   
+10. Now go to /var/log/ and create a new file named acc2.log and copy the below contents into the file(However this file is available above) 
    ```sh
-   [SSN-CC]
-   SEDCMD-Anon = s/ss=\d{5}(\d{4})/ss=xxxxx\1/g s/cc=(\d{4}-){3}(\d{4})/cc=xxxx-xxxx-xxxx-\2/g
+   ss=123456789, cc=1234-5678-9012-3456
+   ss=123456790, cc=2234-5678-9012-3457
+   ss=123456791, cc=3234-5678-9012-3458
+   ss=123456792, cc=4234-5678-9012-3459
+   ss=123456789, cc=1234-5678-9012-3456
+   ss=123456790, cc=2234-5678-9012-3457
+   ss=123456791, cc=3234-5678-9012-3458
+   ss=123456792, cc=4234-5678-9012-3459
    ```
+   
+11. In Splunk go to Settings and in the Files & Directories section Click Add new 
+ 
+12. Choose the Location of the file acc2.log
+   ```sh
+   /var/log/
+   ```
+13. Click Next,Then under Break Events Select Every Line and Save sourcetype as SSN-CC (Whenever you choose this Sourcetype by default all the events will be masked)
+ 
+14. Click Next and Select App context as Search & Reporting
+   
+15. Click Review and Submit
 
 <!-- USAGE EXAMPLES -->
 ## More Details
