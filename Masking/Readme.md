@@ -60,27 +60,32 @@ To Mask the data in the backend of the Splunk follow these simple steps.
 
 ### Masking
 
-1. We need to get the Splunk software into our machine 
+1. In Splunk go to Settings and in the Files & Directories section Click Add new 
+ 
+2. Choose the Location of the file accounts.log
    ```sh
-   sudo wget -O splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz 'https://d7wz6hmoaavd0.cloudfront.net/products/splunk/releases/8.2.2.1/linux/splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz'
+   /var/log/
    ```
-2. We want to extract the Splunk under the opt directory
-   ```sh
-   tar xzvf splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz -C /opt
-   ```
-3. There is splunk startup file under the directory /opt/splunk/bin 
-   ```sh
-   cd /opt/splunk/bin
-   ```
-4. Start the Splunk 
-   ```sh
-   sudo ./splunk start
-   ```
-5. However you will be asked to create a user name and password which you will use to access the Splunk GUI
+3. Click Next,Then under Break Events Select Every Line and Save sourcetype as SSN-CC 
+ 
+4. Click Next and Select App context as Search & Reporting
+   
+5. Click Review and Submit
 
-6. Once everything is done you need to open a browser and type the below code to access the Splunk (However the **localhost** in the below code must be changed to the respective IP when using VMs) 
+6. Go to the directory
    ```sh
-   localhost:8000
+   cd /opt/splunk/etc/system/local
+   ```
+   
+7. Create a file named props.conf
+   ```sh
+   nano props.conf
+   ```
+   
+8.Copy and Paste the below contents inside the props.conf file
+   ```sh
+   nano props.conf
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## More Details
