@@ -87,6 +87,16 @@ To Mask the data in the backend of the Splunk follow these simple steps.
    [SSN-CC]
    SEDCMD-Anon = s/ss=\d{5}(\d{4})/ss=xxxxx\1/g s/cc=(\d{4}-){3}(\d{4})/cc=xxxx-xxxx-xxxx-\2/g
    ```
+   
+9. Restart Splunk
+   ```sh
+   sudo ./splunk restart
+   ```
+8. Now go to /var/log/ and create a new file named acc2.log and copy the below contents into the file(However this file is available above) 
+   ```sh
+   [SSN-CC]
+   SEDCMD-Anon = s/ss=\d{5}(\d{4})/ss=xxxxx\1/g s/cc=(\d{4}-){3}(\d{4})/cc=xxxx-xxxx-xxxx-\2/g
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## More Details
