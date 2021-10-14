@@ -21,7 +21,7 @@
 ### Steps to Follow
 
 
-1.Go to Setting and Click Roles
+1. Go to Setting and Click Roles
    
    
 2. Under Admin Click Edit
