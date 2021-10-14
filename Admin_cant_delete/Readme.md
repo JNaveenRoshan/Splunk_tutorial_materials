@@ -14,17 +14,6 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
-## User Guide on How to delete events as administrator in Splunk
-
-
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-To get Splunk up and running follow these simple steps.
 
 
 ### Installation
