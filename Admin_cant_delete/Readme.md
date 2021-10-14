@@ -1,13 +1,13 @@
 
 
 <p align="center">
-  <h3 align="center">Installation of Splunk</h3>
+  <h3 align="center">How to delete event as Admin in Splunk</h3>
 
   <p align="center">
     <br />
     <br />
     <br />
-    <a href="">View Tutorial</a>
+    <a href="https://youtu.be/ojvT8tynm00">View Tutorial</a>
   </p>
 </p>
 
@@ -15,7 +15,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## User Guide on Installing Splunk in Linux on Cloud
+## User Guide on How to delete events as administrator in Splunk
 
 
 
