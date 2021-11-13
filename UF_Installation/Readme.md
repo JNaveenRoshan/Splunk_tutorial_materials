@@ -57,7 +57,7 @@ To get Splunk up and running follow these simple steps.
    ```
 2. We want to extract the Splunk under the opt directory
    ```sh
-   tar xzvf splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz -C /opt
+   sudo tar zxvf splunkforwarder-8.2.3-cd0848707637-Linux-armv8.tgz -C /opt
    ```
 3. There is splunk startup file under the directory /opt/splunk/bin 
    ```sh
