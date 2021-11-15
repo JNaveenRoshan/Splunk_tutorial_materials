@@ -1,1 +1,10 @@
+[indexAndForward]
+index=false
 
+[tcpout]
+defaultGroup = my_search_peers
+forwardedindex.filter.disable = true
+indexAndForward = false
+
+[tcpout:my_search_peers]
+server=<ip>:<port>
