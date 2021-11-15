@@ -53,11 +53,11 @@ To get Splunk up and running follow these simple steps.
 
 1. We need to get the Splunk software into our machine 
    ```sh
-   wget -O splunkforwarder-8.2.3-cd0848707637-Linux-armv8.tgz 'https://download.splunk.com/products/universalforwarder/releases/8.2.3/linux/splunkforwarder-8.2.3-cd0848707637-Linux-armv8.tgz'
+   wget -O splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb 'https://download.splunk.com/products/universalforwarder/releases/8.2.3/linux/splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb'
    ```
 2. We want to extract the Splunk under the opt directory
    ```sh
-   sudo tar zxvf splunkforwarder-8.2.3-cd0848707637-Linux-armv8.tgz -C /opt
+   dpkg -i splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb
    ```
 3. There is splunk startup file under the directory /opt/splunk/bin 
    ```sh
