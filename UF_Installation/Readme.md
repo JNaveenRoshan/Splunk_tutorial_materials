@@ -7,7 +7,7 @@
     <br />
     <br />
     <br />
-    <a href="https://www.youtube.com/watch?v=KGWZ_CxJ43g"></a>
+    <a href=""></a>
   </p>
 </p>
 
@@ -59,26 +59,23 @@ To get Splunk up and running follow these simple steps.
    ```sh
    dpkg -i splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb
    ```
-3. There is splunk startup file under the directory /opt/splunk/bin 
+3. There is Universal Forwarder Splunk startup file under the directory /opt/splunk/bin 
    ```sh
-   cd /opt/splunk/bin
+   cd /opt/splunk_forwarder/bin
    ```
-4. Start the Splunk 
+4. Start the Universal Forwarder Splunk 
    ```sh
    sudo ./splunk start
    ```
-5. However you will be asked to create a user name and password which you will use to access the Splunk GUI
+5. However Once you accept the terms and agreements you will be asked to create a user name and password which you will use to access the Splunk GUI
 
-6. Once everything is done you need to open a browser and type the below code to access the Splunk (However the **localhost** in the below code must be changed to the respective IP when using VMs) 
-   ```sh
-   localhost:8000
 
 <!-- USAGE EXAMPLES -->
 ## More Details
 
-Use the below link for the official documentation of Splunk
+Use the below link for the official documentation of Universal Forwarder Splunk
 
- please refer to the [Documentation](https://docs.splunk.com/Documentation/Splunk/8.2.2/Installation/Chooseyourplatform)
+ please refer to the [Documentation](https://www.splunk.com/en_us/download/universal-forwarder.html)
 
 
 
