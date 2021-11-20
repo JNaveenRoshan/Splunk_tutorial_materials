@@ -22,7 +22,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Procedure</a></li>
       </ul>
     </li>
     <li><a href="#More Details">More Details</a></li>
@@ -32,51 +32,49 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## User Guide on Installing Splunk in Linux on Cloud
-
-
-
+## User Guide on Sending data to Indexer from Splunk
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get Splunk up and running follow these simple steps.
-
 ### Prerequisites
 
- We need a package called **wget** to get splunk software from the splunk web server into our machine.If you already have this package please do ignore the below step
-  ```sh
-  sudo apt install wget
-  ```
+ We need a setup Indexer as a search peer in Search head
+ 
+ please refer to the [Tutorial](https://www.splunk.com/en_us/download/universal-forwarder.html)
+ 
 
 ### Installation
 
-1. We need to get the Splunk software into our machine 
+1. In the backend of the Search head go to the local folder
    ```sh
-   wget -O splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb 'https://download.splunk.com/products/universalforwarder/releases/8.2.3/linux/splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb'
+   cd /opt/splunk/etc/system/local
    ```
-2. We want to extract the Splunk under the opt directory
+2. Create a file named outputs.conf(This file is available above)
    ```sh
-   dpkg -i splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb
+   nano outputs.conf
    ```
-3. There is Universal Forwarder Splunk startup file under the directory /opt/splunk/bin 
+3. Add the following lines to that file
    ```sh
-   cd /opt/splunk_forwarder/bin
+   [indexAndForward]
+   index=false
+
+    [tcpout]
+    defaultGroup = my_search_peers
+    forwardedindex.filter.disable = true
+    indexAndForward = false
+
+    [tcpout:my_search_peers]
+    server=<ip>:<port>
+
    ```
-4. Start the Universal Forwarder Splunk 
+   
+4. Restart the Splunk 
    ```sh
    sudo ./splunk start
    ```
-5. However Once you accept the terms and agreements you will be asked to create a user name and password which you will use to access the Splunk GUI
-
-
-<!-- USAGE EXAMPLES -->
-## More Details
-
-Use the below link for the official documentation of Universal Forwarder Splunk
-
- please refer to the [Documentation](https://www.splunk.com/en_us/download/universal-forwarder.html)
+5. Now Check the data in Indexer which is been sent by the Search Head
 
 
 
@@ -84,13 +82,6 @@ Use the below link for the official documentation of Universal Forwarder Splunk
 
 
 
-[indexAndForward]
-index=false
 
-[tcpout]
-defaultGroup = my_search_peers
-forwardedindex.filter.disable = true
-indexAndForward = false
 
-[tcpout:my_search_peers]
-server=<ip>:<port>
+
