@@ -63,7 +63,7 @@ We need the universal forwarder installed and running.
 <!-- USAGE EXAMPLES -->
 ## More Details
 
-Use the below link for the official documentation of Universal Forwarder Splunk
+Use the below link for the official documentation of Universal Forwarder as Deployment Client
 
  please refer to the [Documentation](https://www.splunk.com/en_us/blog/platform/adding-a-deployment-server-forwarder-management-to-a-new-or-existing-splunk-cloud-or-splunk-enterprise-deployment.html)
 
