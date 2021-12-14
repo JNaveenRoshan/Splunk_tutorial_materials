@@ -51,27 +51,27 @@ To get Splunk up and running follow these simple steps.
 
 ### Installation
 
-1. We need to get the Splunk software into our machine 
+1. In the Deployment Server Go to the below location and create folder naming the app that you want to deploy 
    ```sh
-   sudo wget -O splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz 'https://d7wz6hmoaavd0.cloudfront.net/products/splunk/releases/8.2.2.1/linux/splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz'
+   cd /opt/splunk/etc/deployment-apps
    ```
-2. We want to extract the Splunk under the opt directory
-   ```sh
-   tar xzvf splunk-8.2.2.1-ae6821b7c64b-Linux-x86_64.tgz -C /opt
-   ```
-3. There is splunk startup file under the directory /opt/splunk/bin 
-   ```sh
-   cd /opt/splunk/bin
-   ```
-4. Start the Splunk 
-   ```sh
-   sudo ./splunk start
-   ```
-5. However you will be asked to create a user name and password which you will use to access the Splunk GUI
+2. Go to Settings and Click Forwarder Management
+ 
+ 
+3. As you can see there is only one client and now click server class 
 
-6. Once everything is done you need to open a browser and type the below code to access the Splunk (However the **localhost** in the below code must be changed to the respective IP when using VMs) 
-   ```sh
-   localhost:8000
+
+4. Click Create one and Type name for the server class
+ 
+ 
+5. Add Apps that you want and Add the client.Add the client name in include text box (i.e) VM instance name
+
+6. Refresh that tab
+
+7. Click Edit app and select the app and check Restart Splunkd
+
+8.  
+
 
 <!-- USAGE EXAMPLES -->
 ## More Details
