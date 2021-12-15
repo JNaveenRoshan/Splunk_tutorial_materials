@@ -44,10 +44,9 @@ To get Deployment Server up in Splunk and send apps/data follow these simple ste
 
 ### Prerequisites
 
- We need a package called **wget** to get splunk software from the splunk web server into our machine.If you already have this package please do ignore the below step
-  ```sh
-  sudo apt install wget
-  ```
+ The Prerequisite for this video is to configure the Universal Forwarder as Deployment Client (We need some deployment Client to send data to)
+ 
+ please refer to the [Tutorial](https://youtu.be/-CK7JEM2Q3I)
 
 ### Configuration
 
@@ -85,9 +84,11 @@ To get Deployment Server up in Splunk and send apps/data follow these simple ste
    ```
    
    
- 10. Use the  
+ 10. Use the below code and the file is already available above.
    ```sh
-
+   [monitor:///var/log/]
+    disabled=false
+    sourcetype=syslog
    ```  
 
  11. Reload splunk deploy server
