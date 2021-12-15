@@ -1,13 +1,13 @@
 
 
 <p align="center">
-  <h3 align="center">Installation of Universal Forwarder Splunk</h3>
+  <h3 align="center">Setup Deployment Server in Splunk</h3>
 
   <p align="center">
     <br />
     <br />
     <br />
-    <a href="https://youtu.be/69u2AFs5Gxw">View Tutorial</a>
+    <a href="https://youtu.be/-CK7JEM2Q3I">View Tutorial</a>
   </p>
 </p>
 
@@ -21,7 +21,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Setup</a></li>
       </ul>
     </li>
     <li><a href="#More Details">More Details</a></li>
@@ -31,7 +31,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## User Guide on Installing Splunk in Linux on Cloud
+## User Guide on How to Setup Deployment server and push apps onto the Clients
 
 
 
@@ -40,7 +40,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get Splunk up and running follow these simple steps.
+To get Deployment Server up in Splunk and send apps/data follow these simple steps.
 
 ### Prerequisites
 
@@ -49,33 +49,70 @@ To get Splunk up and running follow these simple steps.
   sudo apt install wget
   ```
 
-### Installation
+### Configuration
 
-1. We need to get the Splunk software into our machine 
+1. In the Deployment Server Go to the below location and create folder naming the app that you want to deploy
    ```sh
-   wget -O splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb 'https://download.splunk.com/products/universalforwarder/releases/8.2.3/linux/splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb'
+   cd /opt/splunk/etc/deployment-apps 
    ```
-2. We want to extract the Splunk under the opt directory
-   ```sh
-   dpkg -i splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb
-   ```
-3. There is Universal Forwarder Splunk startup file under the directory /opt/splunk/bin 
-   ```sh
-   cd /opt/splunk_forwarder/bin
-   ```
-4. Start the Universal Forwarder Splunk 
-   ```sh
-   sudo ./splunk start
-   ```
-5. However Once you accept the terms and agreements you will be asked to create a user name and password which you will use to access the Splunk GUI
+2. Go to Settings and Click Forwarder Management
 
 
+3. As you can see there is only one client and now click server class 
+
+
+4. Click Create one and Type name for the server class
+ 
+
+5. Add Apps that you want and Add the client
+
+
+6. Add the client name in include text box (i.e) VM instance name
+
+
+7. Refresh that tab
+
+
+8. Click Edit app and select the app and check Restart Splunkd
+
+
+9. Go to the below location and cd to app name you created and go into default folder(if it doesn't exits create one) 
+   ```sh
+   cd /opt/splunk/etc/deployment-apps
+   mkdir default
+   cd default
+   nano inputs.conf
+   ```
+   
+   
+ 10. Use the  
+   ```sh
+
+   ```  
+
+ 11. Reload splunk deploy server
+ 
+ 
+ 12. Check the GUI if it says 1 downloaded the it means the app is deployed on client
+ 
+ 
+ 13. Go to uf instance,restart it and go to the deployment apps folder
+ 
+ 
+ 14. Check for the app we created in the deployment server
+ 
+ 
+ 15. Check for the inputs.conf file we created in the deployment server in the default folder
+ 
+ 
+ 16.    
+   
 <!-- USAGE EXAMPLES -->
 ## More Details
 
-Use the below link for the official documentation of Universal Forwarder Splunk
+Use the below link for the official documentation of Deployment Server in SPLUNK
 
- please refer to the [Documentation](https://www.splunk.com/en_us/download/universal-forwarder.html)
+ please refer to the [Documentation](https://docs.splunk.com/Documentation/Splunk/8.2.3/Updating/Aboutdeploymentserver)
 
 
 
