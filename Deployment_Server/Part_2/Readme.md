@@ -46,7 +46,7 @@ To get Deployment Server up in Splunk and send apps/data follow these simple ste
 
  The Prerequisite for this video is to configure the Universal Forwarder as Deployment Client (We need some deployment Client to send data to)
  
- please refer to the [Tutorial](https://youtu.be/-CK7JEM2Q3I)
+ please refer to the [Tutorial](https://youtu.be/A9kiXzU6kfk)
 
 ### Configuration
 
