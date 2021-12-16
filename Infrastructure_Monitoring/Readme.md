@@ -1,9 +1,3 @@
-
-cd to /opt/splunk/etc/system/local
-
-
-
-
 <p align="center">
   <h3 align="center">Infrastructure Monitoring in Splunk</h3>
 
@@ -82,7 +76,12 @@ To get Splunk up and running follow these simple steps.
    
 8. Copy the below code and paste it in the file (File is already available above) 
   ```sh
-   nano inputs.conf
+   [http://IAS]
+   disabled = 0
+   index = em_metrics
+   indexes = em_metrics
+   sourcetype = em_metrics
+   token = <your token >
    ```
 <!-- USAGE EXAMPLES -->
 ## More Details
