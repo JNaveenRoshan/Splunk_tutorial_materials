@@ -19,7 +19,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Procedure</a></li>
       </ul>
     </li>
     <li><a href="#More Details">More Details</a></li>
@@ -29,7 +29,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## User Guide on Installing Splunk in Linux on Cloud
+## User Guide on Setting up Infrastructure Monitoring in Splunk 
 
 
 
@@ -38,13 +38,28 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get Splunk up and running follow these simple steps.
+To get Splunk Infrastructure Monitoring up and running follow these simple steps.
 
 ### Prerequisites
 
- We need a package called **wget** to get splunk software from the splunk web server into our machine.If you already have this package please do ignore the below step
+1. Go to Apps and Click Find more Apps
+
+
+2. Search for Splunk as infrastructure instance and install the splunk for infrastructure app
+
+
+3. When popped up use splunk account credentials and click login and install
+
+
+4. Click Restart now to restart Splunk
+
+
+5. Go to Apps and Click Find More Apps and search for splunk for infrastructure and install the add on
+
+
+6. Once installed restart splunk
   ```sh
-  sudo apt install wget
+  ./splunk restart
   ```
 
 ### Procedure
@@ -74,7 +89,7 @@ To get Splunk up and running follow these simple steps.
    nano inputs.conf
    ```
    
-8. Copy the below code and paste it in the file (File is already available above) 
+8. Copy the below code and paste it in the file (File is already available above).Replace the sourcetype IAS with the sourcetype you created when creating HTTP input
   ```sh
    [http://IAS]
    disabled = 0
@@ -83,12 +98,31 @@ To get Splunk up and running follow these simple steps.
    sourcetype = em_metrics
    token = <your token >
    ```
+   
+9. Restart the splunk
+  ```sh
+   ./splunk restart
+   ```
+
+10. Go to Find More Apps and click Splunk App for Infrastructure and Click Add new Entity and type the appropriate details in the asked text boxs
+
+
+11. Copy the code under the Collect tab and copy that in your command line in the splunk instance that you want to monitor 
+
+
+12. Check for the update and it might take some time and Once the install is done your output will say that you got one entity
+
+
+13. Click Take a Look now and Click the entity name and Click Analysis
+
+
+
 <!-- USAGE EXAMPLES -->
 ## More Details
 
-Use the below link for the official documentation of Universal Forwarder Splunk
+Use the below link for the official documentation of Splunk Infrastructure Monitoring
 
- please refer to the [Documentation](https://www.splunk.com/en_us/download/universal-forwarder.html)
+ please refer to the [Documentation](https://docs.splunk.com/Observability/infrastructure/intro-to-infrastructure.html)
 
 
 
