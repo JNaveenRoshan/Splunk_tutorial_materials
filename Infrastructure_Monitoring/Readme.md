@@ -74,7 +74,16 @@ To get Splunk up and running follow these simple steps.
   ```sh
    cd /opt/splunk/etc/system/local
    ```
-
+   
+7. Edit the file named inputs.conf and if it doesn’t exists create one
+  ```sh
+   nano inputs.conf
+   ```
+   
+8. Copy the below code and paste it in the file (File is already available above) 
+  ```sh
+   nano inputs.conf
+   ```
 <!-- USAGE EXAMPLES -->
 ## More Details
 
