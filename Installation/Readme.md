@@ -46,19 +46,25 @@ To get Splunk up and running follow these simple steps.
 
  We need a package called **wget** to get splunk software from the splunk web server into our machine.If you already have this package please do ignore the below step
   ```sh
-  sudo apt install wget
+  sudo apt install wget -y
   ```
 
 ### Installation
 
 1. In the Deployment Server Go to the below location and create folder naming the app that you want to deploy 
    ```sh
-   cd /opt/splunk/etc/deployment-apps
+   wget -O splunk-9.0.1-82c987350fde-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.0.1/linux/splunk-9.0.1-82c987350fde-Linux-x86_64.tgz"
    ```
 2. Go to Settings and Click Forwarder Management
+   ```sh
+   wget -O splunk-9.0.1-82c987350fde-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.0.1/linux/splunk-9.0.1-82c987350fde-Linux-x86_64.tgz"
+   ```
  
  
 3. As you can see there is only one client and now click server class 
+  ```sh
+  sudo tar xzvf splunk-9.0.1-82c987350fde-Linux-x86_64.tgz -C /opt
+   ```
 
 
 4. Click Create one and Type name for the server class
