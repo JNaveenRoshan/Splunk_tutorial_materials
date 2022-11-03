@@ -47,7 +47,7 @@
 
  We need three splunk instances that will act as one heavy forwarder and 2 indexers 
 
-### Installation
+### Setup and Configuration 
 
 1. Let's create an empty sample log file and monitor it continuously 
    ```sh
