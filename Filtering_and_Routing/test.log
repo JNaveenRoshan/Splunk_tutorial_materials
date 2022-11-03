@@ -1,0 +1,14 @@
+2022-10-30 11:32:00,791 +0000 ERROR	__init__:594 - Socket error communicating with splunkd (error=[Errno 111] Connection refused), path = /servicesNS/nobody/system/web-features/feature:quarantine_files
+
+2022-10-30 11:32:00,791 +0000 ERROR	__init__:594 - Socket error communicating with splunkd (error=[Errno 111] Connection refused), path = /servicesNS/nobody/system/web-features/feature:quarantine_files
+
+2022-10-30 11:32:00,791 +0000 ERROR	__init__:594 - Socket error communicating with splunkd (error=[Errno 111] Connection refused), path = /servicesNS/nobody/system/web-features/feature:quarantine_files
+
+10-30-2022 11:17:01.831 +0000 INFO  SavedSplunker - savedsearch_id="nobody;splunk_archiver;Bucket Copy Trigger", search_type="scheduled", search_streaming=0, user="nobody", app="splunk_archiver", savedsearch_name="Bucket Copy Trigger", priority=default, status=success, digest_mode=1, durable_cursor=0, scheduled_time=1667128620, window_time=0, dispatch_time=1667128620, run_time=1.237, result_count=0, alert_actions="", sid="scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1667128620_1", suppressed=0, thread_id="AlertNotifierWorker-0", workload_pool=""
+
+10-30-2022 11:17:01.831 +0000 INFO  SavedSplunker - savedsearch_id="nobody;splunk_archiver;Bucket Copy Trigger", search_type="scheduled", search_streaming=0, user="nobody", app="splunk_archiver", savedsearch_name="Bucket Copy Trigger", priority=default, status=success, digest_mode=1, durable_cursor=0, scheduled_time=1667128620, window_time=0, dispatch_time=1667128620, run_time=1.237, result_count=0, alert_actions="", sid="scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1667128620_1", suppressed=0, thread_id="AlertNotifierWorker-0", workload_pool=""
+
+10-30-2022 11:17:01.831 +0000 INFO  SavedSplunker - savedsearch_id="nobody;splunk_archiver;Bucket Copy Trigger", search_type="scheduled", search_streaming=0, user="nobody", app="splunk_archiver", savedsearch_name="Bucket Copy Trigger", priority=default, status=success, digest_mode=1, durable_cursor=0, scheduled_time=1667128620, window_time=0, dispatch_time=1667128620, run_time=1.237, result_count=0, alert_actions="", sid="scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1667128620_1", suppressed=0, thread_id="AlertNotifierWorker-0", workload_pool=""
+
+10-30-2022 11:17:01.831 +0000 INFO  SavedSplunker - savedsearch_id="nobody;splunk_archiver;Bucket Copy Trigger", search_type="scheduled", search_streaming=0, user="nobody", app="splunk_archiver", savedsearch_name="Bucket Copy Trigger", priority=default, status=success, digest_mode=1, durable_cursor=0, scheduled_time=1667128620, window_time=0, dispatch_time=1667128620, run_time=1.237, result_count=0, alert_actions="", sid="scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1667128620_1", suppressed=0, thread_id="AlertNotifierWorker-0", workload_pool=""
+
