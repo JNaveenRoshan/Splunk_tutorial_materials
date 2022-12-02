@@ -15,12 +15,13 @@
          proxy_set_header Host $host;
          proxy_cache_bypass $http_upgrade;
      }
-}
-   ```
+    }
+    ```
 
 
 5. R
    ```sh
+   
    curl https://packages.grafana.com/gpg.key | sudo apt-key add -
    sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
    ```
