@@ -1,0 +1,11 @@
+import json
+import random
+
+app_id = random.randint(1,3)
+users_logged_in = random.randint(1,100)
+
+data = {"name":"app_{}".format(app_id), "users_logged_in" : users_logged_in}
+data = json.dumps(data)
+
+print(data)
+
